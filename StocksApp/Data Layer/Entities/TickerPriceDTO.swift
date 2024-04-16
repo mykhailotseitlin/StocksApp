@@ -9,7 +9,7 @@ import Foundation
 
 struct TickerPriceDTO: DomainMapped {
     
-    let ticker: String
+    let ticker: String?
     let volume: Int
     let volumeWeighted: Double
     let open: Double

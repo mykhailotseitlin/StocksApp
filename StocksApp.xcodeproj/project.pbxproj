@@ -35,6 +35,10 @@
 		848E49182BCE62FA00707F38 /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E49172BCE62FA00707F38 /* NetworkServiceProtocol.swift */; };
 		848E491A2BCE632600707F38 /* TickerClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E49192BCE632600707F38 /* TickerClientProtocol.swift */; };
 		848E491C2BCE633B00707F38 /* PriceClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E491B2BCE633B00707F38 /* PriceClientProtocol.swift */; };
+		84985B3A2BCE89F700F1E6CD /* ChartClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84985B392BCE89F700F1E6CD /* ChartClientProtocol.swift */; };
+		84985B3C2BCE8A4800F1E6CD /* ChartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84985B3B2BCE8A4800F1E6CD /* ChartClient.swift */; };
+		84985B3E2BCE8A7400F1E6CD /* ChartRESTRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84985B3D2BCE8A7400F1E6CD /* ChartRESTRequestBuilder.swift */; };
+		84985B402BCE8FA800F1E6CD /* TickerDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84985B3F2BCE8FA800F1E6CD /* TickerDetailModels.swift */; };
 		84B172BC2BCA719C00239E9F /* StocksAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B172BB2BCA719C00239E9F /* StocksAppApp.swift */; };
 		84B172BE2BCA719C00239E9F /* StocksOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B172BD2BCA719C00239E9F /* StocksOverviewView.swift */; };
 		84B172C02BCA719D00239E9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B172BF2BCA719D00239E9F /* Assets.xcassets */; };
@@ -109,6 +113,10 @@
 		848E49172BCE62FA00707F38 /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		848E49192BCE632600707F38 /* TickerClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerClientProtocol.swift; sourceTree = "<group>"; };
 		848E491B2BCE633B00707F38 /* PriceClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceClientProtocol.swift; sourceTree = "<group>"; };
+		84985B392BCE89F700F1E6CD /* ChartClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartClientProtocol.swift; sourceTree = "<group>"; };
+		84985B3B2BCE8A4800F1E6CD /* ChartClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartClient.swift; sourceTree = "<group>"; };
+		84985B3D2BCE8A7400F1E6CD /* ChartRESTRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRESTRequestBuilder.swift; sourceTree = "<group>"; };
+		84985B3F2BCE8FA800F1E6CD /* TickerDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerDetailModels.swift; sourceTree = "<group>"; };
 		84B172B82BCA719C00239E9F /* StocksApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StocksApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B172BB2BCA719C00239E9F /* StocksAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksAppApp.swift; sourceTree = "<group>"; };
 		84B172BD2BCA719C00239E9F /* StocksOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksOverviewView.swift; sourceTree = "<group>"; };
@@ -217,6 +225,7 @@
 				848E490B2BCE5D7600707F38 /* StorageProtocol.swift */,
 				848E49192BCE632600707F38 /* TickerClientProtocol.swift */,
 				848E491B2BCE633B00707F38 /* PriceClientProtocol.swift */,
+				84985B392BCE89F700F1E6CD /* ChartClientProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 			children = (
 				84B172F52BCA76CC00239E9F /* TickerClient.swift */,
 				84B1731B2BCD0FC900239E9F /* PriceClient.swift */,
+				84985B3B2BCE8A4800F1E6CD /* ChartClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -258,6 +268,7 @@
 			children = (
 				84B172F82BCA8FCE00239E9F /* StocksOverview screen */,
 				84B172FF2BCA904000239E9F /* TickerDetail screen */,
+				84985B412BCE8FAF00F1E6CD /* Model */,
 				84B173032BCA90B200239E9F /* StockList screen */,
 				84B1730A2BCA910300239E9F /* AddStock screen */,
 			);
@@ -270,6 +281,14 @@
 				84B172BF2BCA719D00239E9F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		84985B412BCE8FAF00F1E6CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84985B3F2BCE8FA800F1E6CD /* TickerDetailModels.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		84B172AF2BCA719C00239E9F = {
@@ -356,6 +375,7 @@
 			children = (
 				84B172F22BCA765500239E9F /* TickersRESTRequestBuilder.swift */,
 				84B1731D2BCD10A300239E9F /* PriceRESTRequestBuilder.swift */,
+				84985B3D2BCE8A7400F1E6CD /* ChartRESTRequestBuilder.swift */,
 			);
 			path = RequestBuilders;
 			sourceTree = "<group>";
@@ -634,14 +654,18 @@
 				848E491A2BCE632600707F38 /* TickerClientProtocol.swift in Sources */,
 				848E48EC2BCE5A8400707F38 /* TickersResponseDTO.swift in Sources */,
 				848E49042BCE5BD600707F38 /* TickerPriceErrorDTO.swift in Sources */,
+				84985B3C2BCE8A4800F1E6CD /* ChartClient.swift in Sources */,
 				848E48FC2BCE5B4600707F38 /* Ticker.swift in Sources */,
 				848E490E2BCE5D8600707F38 /* UserDefaultsStorage.swift in Sources */,
 				84B173162BCC14D800239E9F /* Container+Extensions.swift in Sources */,
 				848E49062BCE5BE500707F38 /* TickerPriceResponse.swift in Sources */,
 				848E49022BCE5BC000707F38 /* TickerPriceResponseDTO.swift in Sources */,
 				84B173092BCA90ED00239E9F /* StockListViewModel.swift in Sources */,
+				84985B402BCE8FA800F1E6CD /* TickerDetailModels.swift in Sources */,
 				848E48F22BCE5AC500707F38 /* TickerCurrencyName.swift in Sources */,
+				84985B3A2BCE89F700F1E6CD /* ChartClientProtocol.swift in Sources */,
 				84B172BE2BCA719C00239E9F /* StocksOverviewView.swift in Sources */,
+				84985B3E2BCE8A7400F1E6CD /* ChartRESTRequestBuilder.swift in Sources */,
 				848E49182BCE62FA00707F38 /* NetworkServiceProtocol.swift in Sources */,
 				848E49162BCE62A500707F38 /* DomainMapped.swift in Sources */,
 				84B172EF2BCA748100239E9F /* AppConfiguration.swift in Sources */,

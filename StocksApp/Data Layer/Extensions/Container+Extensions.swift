@@ -18,6 +18,10 @@ extension Container {
         self { PriceClient() }
     }
     
+    var chartClient: Factory<ChartClientProtocol> {
+        self { ChartClient() }
+    }
+    
     var networkService: Factory<NetworkServiceProtocol> {
         self { NetworkService() }
     }
